@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BirdyFly : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class BirdyFly : MonoBehaviour
 
     // Spacebar 
     float force = 300;
+
+    private int topPoints = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +35,13 @@ public class BirdyFly : MonoBehaviour
     }
     public void IncreaseScore()
     {
+    Text showPoints = GameObject.Find("Canvas/Points").GetComponent<Text>();
+    
+       
       points += 10;
+      showPoints.text = "" + points + "Pts";
+
+      
       Debug.Log("Player got 10 points! Total : " + points);
     }
 

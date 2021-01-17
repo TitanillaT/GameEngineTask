@@ -6,27 +6,28 @@ using UnityEngine.SceneManagement;
 public class PointsMovement : MonoBehaviour
 {
 
-    public float speed = 4;
+    [SerializeField]
+    public float _speed = 2;
    
     // Switch Movement Direction every 2 seconds
-    public float switchTime = 4;
+    // public float switchTime = 4;
 
     void Start() {
         // Initial Movement Direction
-        GetComponent<Rigidbody2D>().velocity = Vector2.left * speed;
+        // GetComponent<Rigidbody2D>().velocity = Vector2.left * _speed;
        
         // Switch enemy movement every few seconds
-        InvokeRepeating("Switch", 0, switchTime);
+        // InvokeRepeating("Switch", 0, switchTime);
     }
     void Update()
     {
 
-        
-        transform.Translate(Vector3.left * Time.deltaTime * speed * Random.Range(3f,10f));
-        if(transform.position.x < -15f)
+        transform.Translate(Vector3.left * Time.deltaTime * _speed);
+        if(transform.position.x < -10f)
         {
-            transform.position = new Vector3(15f,transform.position.y,0);
+            transform.position = new Vector3(15f,Random.Range(-1f,1f),0);
         }
+    
 
     }
     void Switch() {
@@ -34,11 +35,8 @@ public class PointsMovement : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player" && gameObject.tag != "GreenBall")
-        {
-            SceneManager.LoadScene(0);
-        }
-        else if(other.tag == "Player" && gameObject.tag == "GreenBall")
+
+        if(other.tag == "Player" && gameObject.tag == "GreenBall")
         {
             BirdyFly birdy = other.GetComponent<BirdyFly>();
             if(birdy != null)
