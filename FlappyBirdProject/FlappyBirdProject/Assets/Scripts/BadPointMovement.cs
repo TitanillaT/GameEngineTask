@@ -13,10 +13,13 @@ public class BadPointMovement : MonoBehaviour
     void Start()
     {
         transform.Translate(Vector3.left * Time.deltaTime * _speed);
-        if(transform.position.x < -15f)
-        {
-            transform.position = new Vector3(15f,Random.Range(-1f,1f),0);
-        }
+        // if(transform.position.x < -15f)
+        // {
+        //     transform.position = new Vector3(15f,Random.Range(-1f,1f),0);
+        // }
+
+        transform.position = new Vector3(Random.Range(12f,17f),Random.Range(-5f,5f),Random.Range(5f,5f));
+
     }
 
     // Update is called once per frame

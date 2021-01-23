@@ -62,7 +62,7 @@ public class BirdyFly : MonoBehaviour
         _canFire = Time.time + _fireRate;
 
             // Position of player (0,0,0) + (0,1,0) = final position of the laser (0,1,0)
-            Instantiate(_shooter,transform.position + new Vector3(1f,0,0), Quaternion.identity);
+        Instantiate(_shooter,transform.position + new Vector3(1f,0,0), Quaternion.identity);
 
     }
 

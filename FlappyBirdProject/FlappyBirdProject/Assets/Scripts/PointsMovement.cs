@@ -25,13 +25,10 @@ public class PointsMovement : MonoBehaviour
         transform.Translate(Vector3.left * Time.deltaTime * _speed);
         if(transform.position.x < -10f)
         {
-            transform.position = new Vector3(15f,Random.Range(-1f,1f),0);
+            transform.position = new Vector3(Random.Range(12f,17f),Random.Range(-1f,1f),0);
         }
     
 
-    }
-    void Switch() {
-        GetComponent<Rigidbody2D>().velocity *= -1;
     }
     void OnTriggerEnter2D(Collider2D other)
     {
