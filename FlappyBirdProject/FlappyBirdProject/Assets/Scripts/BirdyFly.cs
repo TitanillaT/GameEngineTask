@@ -24,7 +24,7 @@ public class BirdyFly : MonoBehaviour
     float speed = 2;
 
     // Jump 
-    float force = 375;
+    float force = 350;
 
     private int topPoints = 0;
 
