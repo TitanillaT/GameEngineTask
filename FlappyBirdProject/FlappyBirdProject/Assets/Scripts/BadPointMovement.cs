@@ -9,7 +9,9 @@ public class BadPointMovement : MonoBehaviour
     [SerializeField]
     public float _speed = 2;
 
+    private bool randomStarter = false; 
     // Start is called before the first frame update
+
     void Start()
     {
         transform.Translate(Vector3.left * Time.deltaTime * _speed);
@@ -18,7 +20,14 @@ public class BadPointMovement : MonoBehaviour
         //     transform.position = new Vector3(15f,Random.Range(-1f,1f),0);
         // }
 
-        transform.position = new Vector3(Random.Range(12f,17f),Random.Range(-5f,5f),Random.Range(5f,5f));
+        if(randomStarter == false) {
+            transform.position = new Vector3(Random.Range(12f,17f),Random.Range(-2f,2f),Random.Range(5f,5f));
+            randomStarter = true;
+        } else {
+            // becomes more random after the game starts
+            transform.position = new Vector3(Random.Range(12f,17f),Random.Range(-5f,5f),Random.Range(5f,5f));
+        }
+
 
     }
 
@@ -44,7 +53,7 @@ public class BadPointMovement : MonoBehaviour
             
        } else {
             
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Menu");
 
        }
     }

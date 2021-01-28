@@ -20,7 +20,7 @@ public class ObstacleCollisions : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Menu");
             Debug.Log("Player crashed into Pipe");
         }
     }

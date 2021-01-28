@@ -17,6 +17,9 @@ public class BirdyFly : MonoBehaviour
     private float _fireRate = 0.5f;
     private float _canFire = -1f;
 
+    [SerializeField]
+    private GameObject _PausedText;
+
     // Movement speed
     float speed = 2;
 
@@ -25,19 +28,47 @@ public class BirdyFly : MonoBehaviour
 
     private int topPoints = 0;
 
+    private bool isPaused = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        _PausedText.SetActive(false);
+        Time.timeScale = 0;
       // gets player started
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        // GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+      
     }
 
     // Update jump for every frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        // start game
+        if (Input.GetKeyDown(KeyCode.Space) && isPaused == false) {
+            _PausedText.SetActive(false);
+            Time.timeScale = 1;
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);
-        
+        }
+
+         // resume game after pause
+        if (Input.GetKeyDown(KeyCode.Space) && isPaused == true ) {
+            _PausedText.SetActive(false);
+            isPaused = false;
+            Time.timeScale = 1;
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 50);
+        }
+
+        // pause game
+        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+            _PausedText.SetActive(true);
+            isPaused = true;
+            Time.timeScale = 0;
+        }
+
+        // if (Input.GetKeyDown(KeyCode.M)) {
+        //     SceneManager.LoadScene("Menu");
+        // }
+
         if(Input.GetKeyDown(KeyCode.Tab) && Time.time > _canFire)
         {
             FireLaser();
@@ -47,12 +78,13 @@ public class BirdyFly : MonoBehaviour
     {
     Text showPoints = GameObject.Find("Canvas/Points").GetComponent<Text>();
     
-       
+
       points += 1;
       // showPoints.text = "" + points + "Pts";
       showPoints.text = "" + points;
       
       Debug.Log("Player got 1 points! Total : " + points);
+
     }
 
     void FireLaser()
