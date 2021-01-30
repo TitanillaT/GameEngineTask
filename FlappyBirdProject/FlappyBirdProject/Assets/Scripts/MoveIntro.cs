@@ -10,6 +10,7 @@ public class MoveIntro : MonoBehaviour
 
 
     void Start()
+    // Move paint bucket to the left
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.left * speed;
             speed -= 0.01f; 
