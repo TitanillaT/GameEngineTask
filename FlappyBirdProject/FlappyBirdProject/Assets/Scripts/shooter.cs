@@ -32,7 +32,7 @@ public class shooter : MonoBehaviour
                 
             }
             //destroy the laser after moving 15 
-            Destroy(gameObject);
+            // Destroy(gameObject);
         }
 
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
@@ -11,21 +12,17 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
         
     }
-    // [SerializeField]
-    // private GameObject _startingText;
-    
 
-    //     public void LoadGame() 
-    // {
-    //     _startingText.SetActive(true);
-    //     StartCoroutine(GameOverFlickerRoutine());
-        
-    // }
 
-    // IEnumerator GameOverFlickerRoutine() 
-    // {
-    //         yield return new WaitForSeconds(3f);
-    //         SceneManager.LoadScene("SampleScene");
+    void Update()
+    {
+        BirdyFly birdy = GetComponent<BirdyFly>();
+        Text High_Score = GameObject.Find("Canvas/High_Score").GetComponent<Text>();
         
-    // }
+        High_Score.text = "High Score : " + birdy.HighScore();
+        Debug.Log("High score : " + birdy.HighScore());
+            
+    }
+
+
 }

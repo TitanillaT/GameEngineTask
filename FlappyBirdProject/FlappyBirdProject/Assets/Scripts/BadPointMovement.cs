@@ -21,11 +21,11 @@ public class BadPointMovement : MonoBehaviour
         // }
 
         if(randomStarter == false) {
-            transform.position = new Vector3(Random.Range(12f,17f),Random.Range(-2f,2f),Random.Range(5f,5f));
+            transform.position = new Vector3(Random.Range(10f,17f),Random.Range(-2f,2f),Random.Range(-5f,5f));
             randomStarter = true;
         } else {
             // becomes more random after the game starts
-            transform.position = new Vector3(Random.Range(12f,17f),Random.Range(-5f,5f),Random.Range(5f,5f));
+            transform.position = new Vector3(Random.Range(10f,17f),Random.Range(-5f,5f),Random.Range(5f,5f));
         }
 
 

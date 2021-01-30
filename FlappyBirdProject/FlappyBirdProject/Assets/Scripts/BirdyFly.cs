@@ -26,7 +26,7 @@ public class BirdyFly : MonoBehaviour
     // Jump 
     float force = 350;
 
-    private int topPoints = 0;
+    public int topPoints;
 
     private bool isPaused = false;
 
@@ -82,9 +82,16 @@ public class BirdyFly : MonoBehaviour
       points += 1;
       // showPoints.text = "" + points + "Pts";
       showPoints.text = "" + points;
-      
-      Debug.Log("Player got 1 points! Total : " + points);
 
+      if(points > topPoints) {
+          topPoints = points;
+      }
+      Debug.Log("Player got 1 points! Total : " + points + "; High Score : " + topPoints );
+
+    }
+    public int HighScore() 
+    {   
+        return topPoints;
     }
 
     void FireLaser()
@@ -97,6 +104,8 @@ public class BirdyFly : MonoBehaviour
         Instantiate(_shooter,transform.position + new Vector3(1f,0,0), Quaternion.identity);
 
     }
+
+
 
 
 

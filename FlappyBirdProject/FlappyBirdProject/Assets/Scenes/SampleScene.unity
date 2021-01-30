@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 6072534901224881853, guid: 97904412fdaff4fe4b64291437b6c597,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7014289874384063857, guid: 97904412fdaff4fe4b64291437b6c597,
         type: 3}
@@ -284,7 +284,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.7
 --- !u!212 &184907940
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -531,7 +531,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.7
 --- !u!212 &292650675
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1290,7 +1290,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.7
 --- !u!212 &1105371270
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1371,7 +1371,7 @@ PrefabInstance:
     - target: {fileID: 6072534901224881853, guid: 97904412fdaff4fe4b64291437b6c597,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7014289874384063857, guid: 97904412fdaff4fe4b64291437b6c597,
         type: 3}
@@ -1737,7 +1737,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.7
 --- !u!212 &1213765795
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1895,7 +1895,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.7
 --- !u!212 &1291190238
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2119,7 +2119,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.7
 --- !u!212 &1467635061
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2263,7 +2263,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.7
 --- !u!212 &1900467249
 SpriteRenderer:
   m_ObjectHideFlags: 0
