@@ -26,7 +26,7 @@ public class BirdyFly : MonoBehaviour
     // Jump 
     float force = 350;
 
-    public int topPoints;
+    private static int topPoints;
 
     private bool isPaused = false;
 
@@ -89,7 +89,7 @@ public class BirdyFly : MonoBehaviour
       Debug.Log("Player got 1 points! Total : " + points + "; High Score : " + topPoints );
 
     }
-    public int HighScore() 
+    public static int HighScore() 
     {   
         return topPoints;
     }
