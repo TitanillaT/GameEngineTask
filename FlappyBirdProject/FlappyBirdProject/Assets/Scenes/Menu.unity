@@ -370,9 +370,9 @@ RectTransform:
   m_Father: {fileID: 1920495989}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 659.5, y: 371}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1319, y: 742}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &519202545
@@ -537,6 +537,7 @@ GameObject:
   - component: {fileID: 819135976}
   - component: {fileID: 819135978}
   - component: {fileID: 819135977}
+  - component: {fileID: 819135980}
   m_Layer: 5
   m_Name: Menu_Background
   m_TagString: Untagged
@@ -553,15 +554,15 @@ RectTransform:
   m_GameObject: {fileID: 819135975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalScale: {x: 18, y: 18, z: 1}
   m_Children: []
   m_Father: {fileID: 1146475021}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.6, y: 22}
-  m_SizeDelta: {x: 78.86949, y: 47.100365}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 72.20093, y: 55.119965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &819135977
 MonoBehaviour:
@@ -582,8 +583,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2bdf9b1ec078a4d68a0c7d80a395cdce, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 7dd468cbbd6b44f8f9ff091916056b5f, type: 3}
+  m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -600,6 +601,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819135975}
   m_CullTransparentMesh: 0
+--- !u!223 &819135980
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819135975}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 1
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &948607477
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +769,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
