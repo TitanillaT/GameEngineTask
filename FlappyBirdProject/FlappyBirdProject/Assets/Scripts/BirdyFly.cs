@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+[RequireComponent(typeof(AudioSource))]
 public class BirdyFly : MonoBehaviour
 {
     //player's points, +1 points 
@@ -30,6 +30,8 @@ public class BirdyFly : MonoBehaviour
 
     private bool isPaused = false;
 
+    AudioSource audioData;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class BirdyFly : MonoBehaviour
         Time.timeScale = 0;
       // gets player started
         // GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        audioData = GetComponent<AudioSource>();
       
     }
 
@@ -102,6 +105,8 @@ public class BirdyFly : MonoBehaviour
 
             // Position of player (0,0,0) + (0,1,0) = final position of the laser (0,1,0)
         Instantiate(_shooter,transform.position + new Vector3(1f,0,0), Quaternion.identity);
+        audioData.Play(0);
+
 
     }
 

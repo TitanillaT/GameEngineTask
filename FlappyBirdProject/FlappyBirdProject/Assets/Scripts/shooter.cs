@@ -6,6 +6,7 @@ public class shooter : MonoBehaviour
 {
     // Start is called before the first frame update
 
+
     [SerializeField]
     private float _speed = 8;
 
@@ -13,6 +14,7 @@ public class shooter : MonoBehaviour
     void Start()
     {
         
+
     }
 
     // Update is called once per frame
@@ -20,15 +22,16 @@ public class shooter : MonoBehaviour
     {
         //make the laser move right
         transform.Translate(Vector3.right * _speed * Time.deltaTime);
-
         //if laser position is great than 15 on the x axis
         if(transform.position.x > 15 && gameObject != null) 
         {
+            
             // check if there is a parent 
             if(transform.parent != null)
             {
                 // destory parent
                 Destroy(transform.parent.gameObject);
+
                 
             }
             //destroy the laser after moving 15 
